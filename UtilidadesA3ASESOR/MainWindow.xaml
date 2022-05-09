@@ -1,0 +1,26 @@
+﻿<Window x:Class="UtilidadesA3ASESOR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UtilidadesA3ASESOR"
+        mc:Ignorable="d"
+        Title="Utilidades a3ASESOR" Height="450" Width="800" Icon="/imagenes/account.png">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="Utilidades" Header="_Utilidades">
+                <MenuItem x:Name="CopiarStastart" Header="_Copiar STASTART" Click="CopiarStastart_Click"/>
+                <MenuItem x:Name="Salir" Header="_Salir" Click="Salir_Click"/>
+
+
+            </MenuItem>
+            
+        </Menu>
+        
+
+    </DockPanel>
+    
+        
+
+    
+</Window>
