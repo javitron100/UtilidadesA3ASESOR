@@ -23,7 +23,7 @@ namespace UtilidadesA3ASESOR
         public MainWindow()
         {
             InitializeComponent();
-        }
+         }
 
         private void Salir_Click(object sender, RoutedEventArgs e)
         {
@@ -33,8 +33,8 @@ namespace UtilidadesA3ASESOR
         private void CopiarStastart_Click(object sender, RoutedEventArgs e)
         {
             CopiarStastart ventanaCopiarStastart = new CopiarStastart();
-            
             ventanaCopiarStastart.ShowDialog();
+            
         }
     }
 }

@@ -23,9 +23,12 @@
             <TextBlock Margin="5" HorizontalAlignment="Center" Text="Copia el fichero STASTART.INI de la carpeta selecciona a la carpeta de destino y sus subcarpetas."></TextBlock>
         </StackPanel>
 
-        <StackPanel Margin="5" Grid.Row="1">
-            <TextBlock HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="1" Foreground="Red"></TextBlock>
-            <Button>Seleccionar carpeta</Button>
+        <StackPanel Margin="5" Grid.Row="1" Background="#FFD3DFEC">
+            <TextBlock HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" Text="1" Foreground="Red"></TextBlock>
+            <TextBlock Margin="5" TextWrapping="Wrap" Text="Selecciona el fichero STASTART.INI que quieres utilizar como origen."></TextBlock>
+            <Button Name="BtnSeleccion" Margin="0,5,0,5" Click="BtnSeleccion_Click">Seleccionar</Button>
+            <TextBlock Name="txtPath" Background="#FFBFCDEA" Margin="0,5,0,5"></TextBlock>
+            
         </StackPanel>
         
         
