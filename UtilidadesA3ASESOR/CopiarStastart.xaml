@@ -23,17 +23,47 @@
             <TextBlock Margin="5" HorizontalAlignment="Center" Text="Copia el fichero STASTART.INI de la carpeta selecciona a la carpeta de destino y sus subcarpetas."></TextBlock>
         </StackPanel>
 
-        <StackPanel Margin="5" Grid.Row="1" Background="#FFD3DFEC">
-            <TextBlock HorizontalAlignment="Right" FontSize="20" FontWeight="Bold" Text="1" Foreground="Red"></TextBlock>
+        <StackPanel Name="PanelIzquierdo" Margin="5" Grid.Row="1" Background="#FFD3DFEC">
+            <TextBlock HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Text="Origen" Foreground="#FF386EAB"></TextBlock>
+
+            
+
             <TextBlock Margin="5" TextWrapping="Wrap" Text="Selecciona el fichero STASTART.INI que quieres utilizar como origen."></TextBlock>
-            <Button Name="BtnSeleccion" Margin="0,5,0,5" Click="BtnSeleccion_Click">Seleccionar</Button>
-            <TextBlock Name="txtPath" Background="#FFBFCDEA" Margin="0,5,0,5"></TextBlock>
+            <Button Name="BtnSeleccionSTASTART" Margin="5" Click="BtnSeleccionSTASTART_Click">Seleccionar STASTART.INI</Button>
+            <TextBlock Name="stastartOrigen" Background="#FF9EA9EA" Margin="0,5,0,5"></TextBlock>
             
         </StackPanel>
-        
-        
-        
-        
+
+        <StackPanel Name="PanelDerecho" Margin="5" Grid.Row="1" Grid.Column="1" Background="#FFC5CFE4">
+            <TextBlock HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Text="Destino" Foreground="#FF386EAB"></TextBlock>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Margin="5" TextWrapping="Wrap" Text="Selecciona la carpeta donde están los destinos (Por ejemplo C:\A3, I:\A3 ..."></TextBlock>
+                <Button Grid.Column="1" Name="BtnSeleccionDestino" Margin="5" Click="BtnSeleccionDestino_Click">Seleccionar carpeta</Button>
+            </Grid>
+
+            <Grid Background="#FF9EA9EA">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="5" Grid.Column="0">Ruta seleccionada donde están los destinos:</TextBlock>
+                <TextBlock Grid.Column="1" Name="CarpetaAplicacionesDestino" Margin="0,5,0,5"></TextBlock>
+            </Grid>
+           
+            <TextBlock Margin="5" TextWrapping="Wrap" Text="Selecciona las carpetas de destino donde vamos a copiar el fichero STASTART.INI seleccionado en Origen."></TextBlock>
+            <TreeView Width="Auto" Height="225" Name="ListadoCarpetas" Margin="5" ScrollViewer.CanContentScroll="True" TreeViewItem.Expanded="TreeViewItem_Expanded">
+                
+            </TreeView>
+            
+
+            
+            
+        </StackPanel>
         
         
     </Grid>   
